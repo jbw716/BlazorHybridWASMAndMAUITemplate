@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\sample-data\" />
+    <Content Remove="Main.razor" />
+    <Content Remove="_Imports.razor" />
+    <Content Remove="Pages\Counter.razor" />
+    <Content Remove="Pages\FetchData.razor" />
+    <Content Remove="Pages\Index.razor" />
+    <Content Remove="Shared\MainLayout.razor" />
+    <Content Remove="Shared\NavMenu.razor" />
+    <Content Remove="Shared\SurveyPrompt.razor" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\sample-data\" />
+    <Folder Include="Data\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <RazorComponent Include="Main.razor" />
+    <RazorComponent Include="_Imports.razor" />
+    <RazorComponent Include="Pages\Counter.razor" />
+    <RazorComponent Include="Pages\FetchData.razor" />
+    <RazorComponent Include="Pages\Index.razor" />
+    <RazorComponent Include="Shared\MainLayout.razor" />
+    <RazorComponent Include="Shared\NavMenu.razor" />
+    <RazorComponent Include="Shared\SurveyPrompt.razor" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\" />
+    <None Remove="Pages\" />
+    <None Remove="Shared\" />
+  </ItemGroup>
+</Project>
